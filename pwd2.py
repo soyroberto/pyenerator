@@ -1,7 +1,6 @@
 import string
 import sys
 import random
-#usar este
 def generar_cadena_aleatoria(*args):
     caracteres_posibles = string.ascii_lowercase + string.ascii_letters + string.digits + string.punctuation
     xt = sys.argv[1] #argv es la longitud de la cadena aleatoria
