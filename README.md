@@ -1,8 +1,8 @@
-# Python Password generator
+# Python Password generator / # Generador de Contraseñas en Python
 
 **My own python password generator**
 
-**Generador de Contraseñas en Python**
+
 
 ![Python Password generator (PPG)](./passwordgentool.png)
 
