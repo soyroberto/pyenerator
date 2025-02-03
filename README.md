@@ -7,4 +7,4 @@
 ![Python Password generator (PPG)](./passwordgentool.png)
 
 
-# Note: Image generated in BING
+***Note: Image generated in BING***
