@@ -1,5 +1,6 @@
 # pyenerator
-My own python password generator
+
+**My own python password generator**
 
 
-![Python Password generator (PPG)] (./passwordgentool.png)
+![Python Password generator (PPG)](./passwordgentool.png)
