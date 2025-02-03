@@ -1,2 +1,4 @@
 # pyenerator
-A python password generator
+My own python password generator
+
+
