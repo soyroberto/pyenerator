@@ -4,7 +4,7 @@
 
 # Usage:
 
-**python3 pwd2.py #lenght of the desired password >=4 (I use a zsh alias, px:**
+**python3 pwd2.py #lenght of the desired password >=4 (I use a zsh alias, px:**)
 
 **px 14**
 
