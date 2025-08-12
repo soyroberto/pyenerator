@@ -1,4 +1,0 @@
-#all things stand for password generator
-# no extra requirements needed
-# this is a password generator in python
-# it generates passwords with letters, numbers, and symbols
