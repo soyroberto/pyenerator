@@ -1,35 +1,85 @@
 import string
 import sys
 import random
-def generar_cadena_aleatoria(*args):
-    caracteres_posibles = string.ascii_lowercase + string.ascii_letters + string.digits + string.punctuation
-    xt = sys.argv[1] #argv es la longitud de la cadena aleatoria
-    longitud = int(xt)
-    # Generate at least two random digits to include in the string
-    random_digits = random.choices(string.digits, k=2)
+import argparse
+
+def generar_cadena_aleatoria(longitud, incluir_numeros=True, incluir_simbolos=True, incluir_especiales=True):
+    """
+    Genera una cadena aleatoria con opciones para incluir diferentes tipos de caracteres.
     
-    # Ensure the string length is at least 2 characters longer than the specified length
-    cadena_aleatoria = ''.join(random.choice(caracteres_posibles) for _ in range(longitud - 2))
+    Args:
+        longitud (int): Longitud de la contraseña
+        incluir_numeros (bool): Si incluir números (0-9)
+        incluir_simbolos (bool): Si incluir símbolos de puntuación
+        incluir_especiales (bool): Si incluir caracteres especiales
     
-    # Add the random digits at random positions in the string
-    random_positions = random.sample(range(longitud - 2), 2)
-    for i, digit in enumerate(random_digits):
-        cadena_aleatoria = cadena_aleatoria[:random_positions[i]] + digit + cadena_aleatoria[random_positions[i]:]
-    dig = random_digits 
+    Returns:
+        str: Contraseña generada
+    """
+    # Siempre incluir letras (minúsculas y mayúsculas)
+    caracteres_posibles = string.ascii_letters
+    
+    # Agregar números si se solicita
+    if incluir_numeros:
+        caracteres_posibles += string.digits
+    
+    # Agregar símbolos si se solicita
+    if incluir_simbolos:
+        caracteres_posibles += "!@#$%^&*-_=+"
+    
+    # Agregar caracteres especiales si se solicita
+    if incluir_especiales:
+        caracteres_posibles += "()[]{}|\\:;<>,.?/~"
+    
+    # Verificar que tenemos al menos algunos caracteres para usar
+    if not caracteres_posibles:
+        caracteres_posibles = string.ascii_letters  # Fallback a solo letras
+    
+    # Generar la contraseña
+    cadena_aleatoria = ''.join(random.choice(caracteres_posibles) for _ in range(longitud))
+    
     return cadena_aleatoria
 
-# Ejemplo de uso con una longitud de contraseña de 10 caracteres (al menos 2 dígitos)
-if len(sys.argv) < 2:
-    print("Falta el tamaño de la cadena aleatoria")
-    sys.exit()
-lp = int(sys.argv[1])
-if (lp < 4):
-    print(sys.argv[1])
-    sys.argv[1] = int(12)
-    cadena_aleatoria = generar_cadena_aleatoria() 
-    print("passwdx4 🔐:", cadena_aleatoria)
-    sys.exit()
-else:
-    cadena_aleatoria = generar_cadena_aleatoria() 
-    print("passwd 🔐:", cadena_aleatoria)
-    print(len(cadena_aleatoria))
+def main():
+    parser = argparse.ArgumentParser(description='Generador de contraseñas con opciones personalizables')
+    parser.add_argument('longitud', type=int, help='Longitud de la contraseña')
+    parser.add_argument('--no-numeros', '--non', action='store_true', help='Excluir números de la contraseña')
+    parser.add_argument('--no-simbolos', '--nos', action='store_true', help='Excluir símbolos de la contraseña')
+    parser.add_argument('--no-especiales', '--noe', action='store_true', help='Excluir caracteres especiales de la contraseña')
+    
+    args = parser.parse_args()
+    
+    # Verificar longitud mínima
+    if args.longitud < 4:
+        print(f"Longitud mínima es 4, usando 13 en su lugar")
+        args.longitud = 13
+    
+    # Determinar qué tipos de caracteres incluir
+    incluir_numeros = not args.no_numeros
+    incluir_simbolos = not args.no_simbolos
+    incluir_especiales = not args.no_especiales
+    
+    # Generar la contraseña
+    cadena_aleatoria = generar_cadena_aleatoria(
+        args.longitud, 
+        incluir_numeros, 
+        incluir_simbolos, 
+        incluir_especiales
+    )
+    
+    # Mostrar información sobre los tipos de caracteres incluidos
+    tipos_incluidos = []
+    if incluir_numeros:
+        tipos_incluidos.append("números")
+    if incluir_simbolos:
+        tipos_incluidos.append("símbolos")
+    if incluir_especiales:
+        tipos_incluidos.append("especiales")
+    
+    print(f"passwd 🔐: {cadena_aleatoria}")
+    print(f"Longitud: {len(cadena_aleatoria)}")
+    print(f"Tipos incluidos: {', '.join(tipos_incluidos) if tipos_incluidos else 'solo letras'}")
+
+if __name__ == "__main__":
+    main()
+
