@@ -3,9 +3,9 @@
 # python3 passgen.py 
 # usage: passgen.py [-h] [--no-numeros] [--no-simbolos] [--no-especiales] longitud
 # sample: 
-python3 passgen.py 12 --nos **All characters except symbols 12 lenght**
-python3 passgen.py 15 --nos --noe **15 Characters no symbols and no special characters**
-python3 passgen.py 18  --non --noe --nos **18 Characters, only letters**
+- python3 passgen.py 12 --nos **All characters except symbols 12 lenght**
+- python3 passgen.py 15 --nos --noe **15 Characters no symbols and no special characters**
+- python3 passgen.py 18  --non --noe --nos **18 Characters, only letters**
 
 
 **My own python password generator**
