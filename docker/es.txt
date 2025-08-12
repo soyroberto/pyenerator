@@ -5468,8 +5468,6 @@
 16597 	zegríes
 16598 	zéjel
 16599 	zeugma
-16600 	zionismo
-16601 	zionista
 16602 	zoca
 16603 	zocarrón
 16604 	zocata

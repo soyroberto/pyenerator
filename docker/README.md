@@ -32,25 +32,25 @@ Example: `correct-horse-battery-staple` vs `Tr0ub4dor&3`
 
 #### Basic XKCD passphrase (5 words):
 ```bash
-python3 pwd2.py --xkcd
+python3 main.py --xkcd
 ```
 Output: `passphrase 🔐: reprogram-fleshed-sensuous-mortify`
 
 #### XKCD with capitalization and numbers:
 ```bash
-python3 pwd2.py --xkcd --capitalizar --agregar-numeros
+python3 main.py --xkcd --capitalizar --agregar-numeros
 ```
 Output: `passphrase 🔐: Underpay-Circle-Trough-Bakery-92`
 
 #### XKCD with custom separator and more words:
 ```bash
-python3 pwd2.py --xkcd --palabras 5 --separador "_"
+python3 main.py --xkcd --palabras 5 --separador "_"
 ```
 Output: `passphrase 🔐: tapestry_delighted_fleshy_liability_dipper`
 
 #### XKCD with all options:
 ```bash
-python3 pwd2.py --xkcd --palabras 6 --separador "." --capitalizar --agregar-numeros --agregar-simbolos
+python3 main.py --xkcd --palabras 6 --separador "." --capitalizar --agregar-numeros --agregar-simbolos
 ```
 Output: `passphrase 🔐: Eraser.Entail.Scouring.Curtsy.Library.Carload.48.$`
 
@@ -58,21 +58,21 @@ Output: `passphrase 🔐: Eraser.Entail.Scouring.Curtsy.Library.Carload.48.$`
 
 #### Basic usage (includes all character types):
 ```bash
-python3 pwd2.py 12
+python3 main.py 12
 ```
 Output: `passwd 🔐: 08*wgSOfYXlt`
 
 #### Exclude numbers:
 ```bash
-python3 pwd2.py 12 --no-numeros
+python3 main.py 12 --no-numeros
 # or using the short form:
-python3 pwd2.py 12 --non
+python3 main.py 12 --non
 ```
 Output: `passwd 🔐: KPn%i,,'@@~!`
 
 #### Only letters:
 ```bash
-python3 pwd2.py 12 --non --nos --noe
+python3 main.py 12 --non --nos --noe
 ```
 Output: `passwd 🔐: QOuaOeNoAyxq`
 
