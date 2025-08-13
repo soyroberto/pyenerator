@@ -5,6 +5,8 @@ import argparse
 import os
 #word list from EFF
 #https://www.eff.org/files/2016/07/18/eff_large_wordlist.txt
+#es.txt is a Spanish word list based on https://github.com/JorgeDuenasLerin/diccionario-espanol-txt + my own additions based on my own dictionary script
+
 def cargar_lista_palabras(archivo_palabras="./es.txt"):
     """
     Carga la lista de palabras desde el archivo EFF.

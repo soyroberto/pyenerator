@@ -147,4 +147,4 @@ If the EFF wordlist file is not found, the generator falls back to a basic built
 **For full symmetric difference**
 awk 'NR==FNR {unique[$2]++; print; next} !($2 in unique) {print}' todases.txt es.txt | sort -k2 > merged.txt
 - docker build -t passwd .
-
+docker container export 426f8ea0b7dd -o passout.tar #debugging the size
