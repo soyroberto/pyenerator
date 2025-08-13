@@ -1,4 +1,7 @@
 # Python Password generator =^^= Generador de Contraseñas en Python
+
+![Python Password generator (PPG)](./imgpwd.png)
+
 **Updated to exclude, include, special character, numbers, symbols**
 # python3 main.py 
 # usage: main.py [-h] [--no-numeros] [--no-simbolos] [--no-especiales] longitud
@@ -149,4 +152,3 @@ If the EFF wordlist file is not found, the generator falls back to a basic built
 awk 'NR==FNR {unique[$2]++; print; next} !($2 in unique) {print}' todases.txt es.txt | sort -k2 > merged.txt
 - docker build -t passwd .
 
-![Python Password generator (PPG)](./imgpwd.png)
