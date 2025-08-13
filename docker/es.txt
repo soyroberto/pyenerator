@@ -110365,7 +110365,7 @@
 16510 	yeguas
 16520 	yurés
 16521 	yurta
-16527 	Zabuquear Menear o revolver una cosa líquida moviendo la vasija en que está
+16527 	Zabuquear
 16530 	zacatuche
 16536 	zagales
 16537 	zagalo
@@ -110386,3 +110386,4 @@
 16617 	zopiro
 16622 	zotaco
 16634 	zurupeta
+17000 	chipocludo
