@@ -80,6 +80,18 @@ python3 main.py 12 --non --nos --noe
 ```
 Output: `passwd 🔐: QOuaOeNoAyxq`
 
+#### Run as Container samples
+```bash
+docker run passwd  --xkcd --palabras 6 --separador "**"
+````
+```bash
+docker run passwd  --noe 12
+````
+```bash
+docker run passwd   12 --nos --non --capitalizar
+```
+
+
 ## Command Reference
 
 ### XKCD Mode Options

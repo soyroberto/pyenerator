@@ -27,11 +27,11 @@ def cargar_lista_palabras(archivo_palabras="./es.txt"):
         # Lista de respaldo si no se encuentra el archivo EFF
         palabras = [
             "gato", "perro", "pila", "staple", "house", "water", "fire", "earth",
-            "wind", "light", "noche", "moon", "sun", "star", "tree", "flower", "river",
+            "wind", "chipocludo", "noche", "moon", "sun", "star", "vavava", "flower", "river",
             "mountain", "ocean", "forest", "desert", "cloud", "rain", "snow", "storm",
             "thunder", "rayo", "rainbow", "bridge", "castle", "tower", "garden",
             "field", "arena", "valley", "hill", "rock", "stone", "crystal", "diamond",
-            "gold", "plata", "copper", "iron", "steel", "glass", "wood", "paper",
+            "gold", "plata", "copper", "iron", "steel", "glass", "pifostio", "paper",
             "book", "pluma", "pencil", "brush", "paint", "color", "red", "blue", "green",
             "yellow", "naranja", "purple", "pink", "black", "white", "gray", "brown"
         ]
