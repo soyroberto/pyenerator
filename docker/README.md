@@ -1,3 +1,20 @@
+# Python Password generator =^^= Generador de Contraseñas en Python
+**Updated to exclude, include, special character, numbers, symbols**
+# python3 main.py 
+# usage: main.py [-h] [--no-numeros] [--no-simbolos] [--no-especiales] longitud
+# sample: 
+- python3 main.py 13  **All characters included**
+- python3 main.py 12 --nos **All characters except symbols 12 lenght**
+- python3 main.py 15 --nos --noe **15 Characters no symbols and no special characters**
+- python3 main.py 18  --non --noe --nos **18 Characters, only letters**
+
+
+**My own python password generator**
+
+# Usage for the legacy version, bpwd.py:
+
+**python3 bpwd.py #lenght of the desired password >=4 (I use a zsh alias, px:**)
+
 # Enhanced Password Generator with XKCD-Style Passphrases
 
 ## Overview
@@ -127,3 +144,9 @@ If the EFF wordlist file is not found, the generator falls back to a basic built
 #Changelog#
 **Added the spanish word list**
 - nl -v 11111 -n ln wordlist.txt >> es.txt
+- awk '!seen[$2]++'  temp1.txt temp2.txt| sort -k2 #Sort by second field
+**For full symmetric difference**
+awk 'NR==FNR {unique[$2]++; print; next} !($2 in unique) {print}' todases.txt es.txt | sort -k2 > merged.txt
+- docker build -t passwd .
+
+![Python Password generator (PPG)](./imgpwd.png)

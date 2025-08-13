@@ -144,14 +144,9 @@ If the EFF wordlist file is not found, the generator falls back to a basic built
 #Changelog#
 **Added the spanish word list**
 - nl -v 11111 -n ln wordlist.txt >> es.txt
+- awk '!seen[$2]++'  temp1.txt temp2.txt| sort -k2 #Sort by second field
+**For full symmetric difference**
+awk 'NR==FNR {unique[$2]++; print; next} !($2 in unique) {print}' todases.txt es.txt | sort -k2 > merged.txt
+- docker build -t passwd .
 
-
-
-
-
-
-![Python Password generator (PPG)](./passwordgentool.png)
-
-
-***Image generated in BING***
-prompt: create a Picture of a password generator tool no robots in the picture
+![Python Password generator (PPG)](./imgpwd.png)
