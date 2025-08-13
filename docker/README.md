@@ -23,7 +23,7 @@ Example: `correct-horse-battery-staple` vs `Tr0ub4dor&3`
 - **Choose to include/exclude special characters**: Use `--no-especiales` or `--noe` to exclude special characters
 
 ### XKCD Mode (New!)
-- **Word-based passphrases**: Uses EFF's large wordlist (7,776 words)
+- **Word-based passphrases**: Uses an spanish large wordlist (110,387 words)
 - **Customizable word count**: Choose how many words to use
 - **Custom separators**: Use any character to separate words
 - **Capitalization**: Option to capitalize first letter of each word
