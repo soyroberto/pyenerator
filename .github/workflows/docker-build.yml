@@ -3,10 +3,6 @@ name: Build and Push Passwd
 on:
   push:
     branches: ["main"]
-    # Build on ANY file change except .gitignore/docs
-    paths-ignore: 
-      - "**.md"
-      - ".gitignore"
 
 jobs:
   docker:
@@ -27,10 +23,8 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
+          file: docker/Dockerfile  # ← Specify Dockerfile path here
           push: true
           tags: |
             soyroberto/passwd:latest
             soyroberto/passwd:${{ github.sha }}
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
-          platforms: linux/amd64,linux/arm64  # Multi-arch support
