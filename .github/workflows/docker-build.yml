@@ -1,6 +1,7 @@
 name: Build and Push passwd Docker Image
 description: This workflow builds and pushes the passwd Docker image to Docker Hub on every push to the main branch.
 
+
 on:
   push:
     branches: ["main"]
@@ -24,6 +25,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
+          platforms: linux/amd64,linux/arm64
           push: true
           tags: |
             soyroberto/passwd:latest
