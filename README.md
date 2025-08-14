@@ -1,6 +1,6 @@
 # Python Password generator =^^= Generador de Contraseñas en Python
 
-![Python Password generator (PPG)](./imgpwd.png)
+![Python Password generator (PPG)](https://github.com/soyroberto/pyenerator/blob/main/imgpwd.png)
 
 # Enhanced Password Generator with XKCD-Style Passphrases
 
