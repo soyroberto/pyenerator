@@ -7,8 +7,8 @@
 11485 	Anatemizar
 11555 	Apearse
 11582 	Apostólica
-11600 	Apurruñar Apretar cariñosamente a alguien
-11667 	Artralgia Dolor de las articulaciones 
+11600 	Apurruñar
+11667 	Artralgia
 11689 	Asturias
 11707 	Atemorizarse
 11789 	B1
