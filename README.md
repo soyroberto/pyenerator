@@ -2,6 +2,9 @@
 
 ![Python Password generator (PPG)](https://github.com/soyroberto/pyenerator/blob/main/imgpwd.png)
 
+# Container Image Pull
+### soyroberto/passwd:latest ###
+
 # Enhanced Password Generator with XKCD-Style Passphrases
 
 ## Overview
