@@ -1,6 +1,6 @@
 # Pyenerator: Python Password Generator
 
-![Python Password generator (PPG)](https://github.com/soyroberto/pyenerator/password_generation_process.png)
+![Python Password generator (PPG)](https://github.com/soyroberto/pyenerator/blob/main/password_generation_process.png)
 
 Pyenerator is a versatile command-line tool for generating strong, memorable passwords and passphrases. It offers two distinct modes: a traditional random character password generator and an XKCD-style passphrase generator. This tool is designed to be flexible, allowing users to customize the generated passwords to meet various security requirements.
 
